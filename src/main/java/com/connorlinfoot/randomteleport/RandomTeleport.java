@@ -16,6 +16,8 @@ public class RandomTeleport extends JavaPlugin {
     private static Plugin plugin;
     public static boolean SNAPSHOT = false;
     public static String Prefix = ChatColor.GRAY + "[" + ChatColor.AQUA + "RandomTeleport" + ChatColor.GRAY + "] " + ChatColor.RESET;
+    public static int XRadius = 0;
+    public static int ZRadius = 0;
 
     @Override
     public void onEnable() {
@@ -24,6 +26,9 @@ public class RandomTeleport extends JavaPlugin {
         saveConfig();
         Server server = getServer();
         ConsoleCommandSender console = server.getConsoleSender();
+
+        XRadius = getConfig().getInt("X Radius");
+        ZRadius = getConfig().getInt("Z Radius");
 
         console.sendMessage("");
         console.sendMessage(ChatColor.BLUE + "-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-");

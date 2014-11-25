@@ -1,4 +1,4 @@
-Max X Value: 10000
-Max Y Value: 10000
+X Radius: 10000
+Z Radius: 10000
 Item On First Join: true
 Item Remove On Use: true
