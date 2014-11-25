@@ -36,7 +36,7 @@ public class PlayerJoin implements Listener {
     private static void giveItem(Player player) {
         ItemStack itemStack = new ItemStack(Material.STICK);
         ItemMeta itemMeta = itemStack.getItemMeta();
-        itemMeta.setDisplayName(ChatColor.AQUA + "Random Teleport" + ChatColor.GRAY + " (Right Click)");
+        itemMeta.setDisplayName(ChatColor.AQUA + "Random Teleport " + ChatColor.GRAY + "(Right Click)");
         itemStack.setItemMeta(itemMeta);
         player.getInventory().addItem(itemStack);
     }

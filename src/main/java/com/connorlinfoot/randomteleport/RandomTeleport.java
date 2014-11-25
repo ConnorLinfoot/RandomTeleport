@@ -1,6 +1,7 @@
 package com.connorlinfoot.randomteleport;
 
 import com.connorlinfoot.randomteleport.Commands.RTPCommand;
+import com.connorlinfoot.randomteleport.Listeners.ItemClick;
 import com.connorlinfoot.randomteleport.Listeners.PlayerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
@@ -54,6 +55,7 @@ public class RandomTeleport extends JavaPlugin {
     private void registerEvents(ConsoleCommandSender console) {
         PluginManager pluginManager = Bukkit.getPluginManager();
         pluginManager.registerEvents(new PlayerJoin(), this);
+        pluginManager.registerEvents(new ItemClick(), this);
         console.sendMessage(Prefix + "Events have been registered");
     }
 
