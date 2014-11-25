@@ -60,7 +60,7 @@ public class RandomTeleport extends JavaPlugin {
     }
 
     private void registerCommands(ConsoleCommandSender console) {
-        getCommand("eb").setExecutor(new RTPCommand());
+        getCommand("rtp").setExecutor(new RTPCommand());
         console.sendMessage(Prefix + "Commands have been registered");
     }
 }
