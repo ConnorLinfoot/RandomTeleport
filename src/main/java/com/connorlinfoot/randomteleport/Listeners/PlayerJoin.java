@@ -31,6 +31,7 @@ public class PlayerJoin implements Listener {
             players.add(player.getUniqueId().toString());
             RandomTeleport.getPlugin().getConfig().set("Joined Players", players);
         }
+        RandomTeleport.getPlugin().saveConfig();
     }
 
     private static void giveItem(Player player) {
