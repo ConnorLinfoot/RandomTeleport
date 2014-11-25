@@ -1,0 +1,8 @@
+name: RandomTeleport
+description: RandomTeleport
+main: com.connorlinfoot.randomteleport.RandomTeleport
+version: 1.0-SNAPSHOT
+authors: [Connor Linfoot]
+commands:
+  rtp:
+    description: RandomTeleport command
