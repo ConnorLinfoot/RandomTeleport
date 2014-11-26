@@ -2,7 +2,6 @@ package com.connorlinfoot.randomteleport.Listeners;
 
 import com.connorlinfoot.randomteleport.RandomTeleport;
 import org.bukkit.ChatColor;
-import org.bukkit.Material;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -35,7 +34,7 @@ public class PlayerJoin implements Listener {
     }
 
     private static void giveItem(Player player) {
-        ItemStack itemStack = new ItemStack(Material.STICK);
+        ItemStack itemStack = new ItemStack(RandomTeleport.itemType);
         ItemMeta itemMeta = itemStack.getItemMeta();
         itemMeta.setDisplayName(ChatColor.AQUA + "Random Teleport " + ChatColor.GRAY + "(Right Click)");
         itemStack.setItemMeta(itemMeta);

@@ -5,6 +5,7 @@ import com.connorlinfoot.randomteleport.Listeners.ItemClick;
 import com.connorlinfoot.randomteleport.Listeners.PlayerJoin;
 import org.bukkit.Bukkit;
 import org.bukkit.ChatColor;
+import org.bukkit.Material;
 import org.bukkit.Server;
 import org.bukkit.command.ConsoleCommandSender;
 import org.bukkit.plugin.Plugin;
@@ -18,6 +19,7 @@ public class RandomTeleport extends JavaPlugin {
     public static String Prefix = ChatColor.GRAY + "[" + ChatColor.AQUA + "RandomTeleport" + ChatColor.GRAY + "] " + ChatColor.RESET;
     public static int XRadius = 0;
     public static int ZRadius = 0;
+    public static Material itemType = Material.STICK;
 
     @Override
     public void onEnable() {
@@ -27,6 +29,10 @@ public class RandomTeleport extends JavaPlugin {
         Server server = getServer();
         ConsoleCommandSender console = server.getConsoleSender();
 
+        Material temp = Material.valueOf(getConfig().getString("Item Material"));
+        if (temp != null) {
+            itemType = temp;
+        }
         XRadius = getConfig().getInt("X Radius");
         ZRadius = getConfig().getInt("Z Radius");
 

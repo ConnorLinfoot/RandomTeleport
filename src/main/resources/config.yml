@@ -2,3 +2,4 @@ X Radius: 10000
 Z Radius: 10000
 Item On First Join: true
 Item Remove On Use: true
+Item Material: STICK
